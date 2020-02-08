@@ -1,6 +1,6 @@
 {
   "name": "@monkeycf/trump",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A modern JavaScript utility library delivering modularity, performance, &amp; extras.",
   "main": "lib/index.js",
   "scripts": {
