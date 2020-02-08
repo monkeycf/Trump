@@ -1,4 +1,4 @@
-# @monkeycf/trump
+# @monkeycf/trump[![Build Status](https://travis-ci.com/monkeycf/trump.svg?branch=master)](https://travis-ci.com/monkeycf/trump)
 
 A modern JavaScript utility library delivering modularity, performance, &amp; extras.
 
