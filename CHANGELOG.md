@@ -2,9 +2,9 @@
 
 # [0.4.1] (2020-02-09)
 
-### Bug Fixes
+### :zap: Bug Fixes
 * 修复Travis-cl
 
-### Features
+### :tada: Features
 * 完善模块文档
 * 添加基础配置
