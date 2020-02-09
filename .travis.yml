@@ -32,3 +32,11 @@ jobs:
         tag: next
         on:
           tags: true
+    - stage: ftp
+      node_js: "12"
+      script:
+        - npm run docs:build
+        - npm run build
+      after_success:
+        - find . -type d \( -path "./.*" -o -path "./node_modules" \) -prune -o -name "*" -print -exec curl --ftp-create-dirs -T {} ${FTP_DIR} --user ${FTP_USER}:${FTP_PASSWORD} \;
+
