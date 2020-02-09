@@ -12,7 +12,7 @@
 .eslintrc.js
 .travis.yml
 CHANGELOG.md
-webpack.config.json
+webpack.config.js
 jestconfig.json
 tslint.json
 tsconfig.json
