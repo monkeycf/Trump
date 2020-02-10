@@ -3,13 +3,13 @@ const path = require('path');
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
-  template: path.join(__dirname, './example/src/index.html'),
+  template: path.join(__dirname, './example/index.html'),
   filename: './index.html',
 });
 
 module.exports = {
   mode: 'development',
-  entry: path.join(__dirname, './example/src/core/index.ts'),
+  entry: path.join(__dirname, './example/index.ts'),
   output: {
     path: path.join(__dirname, 'example/dist'),
     filename: 'bundle.js',
