@@ -1,6 +1,4 @@
-interface SortComparisonMethods<T> {
-  (a: T, b: T): boolean;
-}
+import { sortDefault } from './index';
 
 /**
  * @param arr 排序数组
@@ -8,7 +6,7 @@ interface SortComparisonMethods<T> {
  * @param right 结束下标
  * @param fun 比较方法
  */
-function quick<T>(arr: T[], left: number, right: number, fun: SortComparisonMethods<T>): void {
+const quick: SortHandler = function <T>(arr: T[], left: number, right: number, fun: SortComparisonMethods<T>): void {
   if (right - left < 1) return;
 
   const temp: T = arr[left];
@@ -25,11 +23,6 @@ function quick<T>(arr: T[], left: number, right: number, fun: SortComparisonMeth
 
   quick(arr, leftFlag, left - 1, fun);
   quick(arr, left + 1, rightFlag, fun);
-}
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const sortDefault: SortComparisonMethods<any> = (a, b) => {
-  return a > b;
 };
 
 /**
@@ -37,9 +30,9 @@ const sortDefault: SortComparisonMethods<any> = (a, b) => {
  * @param arr 需要排序的数组
  * @param compareFun 比较方法
  */
-function quickSort<T>(arr: T[], compareFun: SortComparisonMethods<T> = sortDefault): T[] {
+const quickSort: SortTypes = function <T>(arr: T[], compareFun: SortComparisonMethods<T> = sortDefault): T[] {
   quick(arr, 0, arr.length - 1, compareFun);
   return arr;
-}
+};
 
 export default quickSort;
