@@ -4,7 +4,7 @@ heroImage: /logo.jpg
 heroText: '@monkeycf/trump'
 tagline: A modern JavaScript utility library delivering.
 actionText: 快速上手 →
-actionLink: /pages/api/element.md
+actionLink: /pages/sort.md
 features:
 - title: 简单易懂
   details: 使用Javascript开发简单模块

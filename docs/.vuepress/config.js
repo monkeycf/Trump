@@ -9,8 +9,8 @@ module.exports = {
     nav: [
       { text: '首页', link: '/' },
       {
-        text: '指南', ariaLabel: '分类1', items: [
-          { text: 'API', link: '/pages/api/element.md' },
+        text: '学习', ariaLabel: '分类', items: [
+          { text: '排序', link: '/pages/sort.md' },
           { text: 'CHANGELOG', link: 'https://github.com/monkeycf/trump/blob/master/CHANGELOG.md' },
         ],
       },
@@ -19,20 +19,12 @@ module.exports = {
 
     // 侧边导航栏
     sidebar: {
-      '/pages/api/': [
+      '/pages/': [
         {
-          title: 'API',
-          collapsable: false,
-          sidebarDepth: 1,
-          children: [
-            ['element.md', '子菜单1'],
-          ],
-        },
-        {
-          title: '其他',
+          title: '指南',
           collapsable: false,
           children: [
-            ['element.md', '子菜单1'],
+            ['sort.md', '排序'],
           ],
         },
       ],
