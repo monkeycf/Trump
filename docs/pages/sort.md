@@ -3,7 +3,7 @@
 ## QuickSort
 * 参数：
     * {Array\<any>} array
-    * {Function}
+    * {Function} SortComparisonMethods
 * 返回值：有序数组
 * 示例
 ```javascript
@@ -17,7 +17,7 @@
 ## HeapSort
 * 参数：
     * {Array\<any>} array
-    * {Function}
+    * {Function} SortComparisonMethods
 * 返回值：有序数值
 * 示例
 ```javascript
