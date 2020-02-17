@@ -6,7 +6,7 @@ import { sortDefault } from './index';
  * @param right 结束下标
  * @param fun 比较方法
  */
-const quick: SortHandler = function <T>(arr: T[], left: number, right: number, fun: SortComparisonMethods<T>): void {
+const quick: SortHandler = function<T>(arr: T[], left: number, right: number, fun: SortComparisonMethods<T>): void {
   if (right - left < 1) return;
 
   const temp: T = arr[left];
@@ -30,7 +30,7 @@ const quick: SortHandler = function <T>(arr: T[], left: number, right: number, f
  * @param arr 需要排序的数组
  * @param compareFun 比较方法
  */
-const quickSort: SortTypes = function <T>(arr: T[], compareFun: SortComparisonMethods<T> = sortDefault): T[] {
+const quickSort: SortTypes = function<T>(arr: T[], compareFun: SortComparisonMethods<T> = sortDefault): T[] {
   quick(arr, 0, arr.length - 1, compareFun);
   return arr;
 };

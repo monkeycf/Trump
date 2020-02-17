@@ -16,8 +16,14 @@ function swap<T>(arr: T[], l: number, r: number): void {
  * @param len 待排数组长度
  * @param fun 比较方法
  */
-const heapHandler: SortHandler = function <T>(arr: T[], index: number, len: number, fun: SortComparisonMethods<T>): void {
-  const li = index * 2 + 1, ri = (index + 1) * 2;
+const heapHandler: SortHandler = function<T>(
+  arr: T[],
+  index: number,
+  len: number,
+  fun: SortComparisonMethods<T>,
+): void {
+  const li = index * 2 + 1,
+    ri = (index + 1) * 2;
   let pi = index;
   if (li < len && fun(arr[li], arr[pi])) pi = li;
   if (ri < len && fun(arr[ri], arr[pi])) pi = ri;
@@ -32,7 +38,7 @@ const heapHandler: SortHandler = function <T>(arr: T[], index: number, len: numb
  * @param arr 排序数组
  * @param fun 比较方法
  */
-const heapSort: SortTypes = function <T>(arr: T[], fun: SortComparisonMethods<T> = sortDefault): void {
+const heapSort: SortTypes = function<T>(arr: T[], fun: SortComparisonMethods<T> = sortDefault): void {
   const len = arr.length;
   for (let i = Math.floor((len - 1) / 2); i >= 0; i--) {
     heapHandler(arr, i, len, fun);
