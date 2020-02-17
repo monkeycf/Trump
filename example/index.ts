@@ -1,3 +1,3 @@
-import quickExample from './sort/quickSortExample';
+import sort from './sort';
 
-quickExample();
+sort();
